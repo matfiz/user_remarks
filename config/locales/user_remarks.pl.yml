@@ -1,0 +1,7 @@
+pl:
+  user_remarks:
+    remarks:
+      add_remark: 'Dodaj sugestię'
+      title: 'Temat'
+      text: 'Wyczerpujący opis'
+      thank_you: 'Dziękujemy za przesłanie sugestii! Skontaktujemy się z Tobą, jeśli będziemy mieli dalsze pytania dotyczące zgłoszenia.'

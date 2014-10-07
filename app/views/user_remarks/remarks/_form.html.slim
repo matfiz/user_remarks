@@ -1,0 +1,6 @@
+= simple_form_for @remark, remote: true, response: :json do |f|
+  =f.error_notification
+  =f.input :title, label: t('user_remarks.remarks.title')
+  =f.input :text, label: t('user_remarks.remarks.text')
+  =f.input :link, as: :hidden
+  =f.button :submit, class: 'btn blue'

@@ -1,0 +1,9 @@
+h2= @remark.title
+p= @remark.text
+i= @remark.user.to_s
+p
+  | (
+  = @remark.link
+  | )
+
+= link_to 'Edit', edit_remark_path(@remark)
