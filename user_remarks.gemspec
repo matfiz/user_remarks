@@ -20,6 +20,7 @@ Gem::Specification.new do |s|
   s.add_dependency "rails", "~> 4.2.0.beta2"
   s.add_dependency "simple_form"
   s.add_dependency "slim-rails"
+  s.add_dependency "slack-notifier"
   s.add_dependency 'jbuilder', '~> 2.0'
 
   s.add_development_dependency "sqlite3"
