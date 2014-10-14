@@ -5,3 +5,5 @@ pl:
       title: 'Temat'
       text: 'Wyczerpujący opis'
       thank_you: 'Dziękujemy za przesłanie sugestii! Skontaktujemy się z Tobą, jeśli będziemy mieli dalsze pytania dotyczące zgłoszenia.'
+      send: "Wyślij"
+      remarks: "uwagi"

@@ -1,0 +1,67 @@
+#remark_tab
+  position: fixed
+  background-color: whitesmoke
+  width: 300px
+  height: 230px
+  bottom: -200px
+  left: -272px
+  z-index: 999999
+  cursor: pointer
+  transition: bottom 500ms, left 500ms
+  padding-top: 20px
+  border-radius: 5px !important
+  border: 1px solid lightslategray
+  -webkit-box-shadow: 1px 1px 1px 0px rgba(50, 50, 50, 1)
+  -moz-box-shadow:    1px 1px 1px 0px rgba(50, 50, 50, 1)
+  box-shadow:         1px 1px 1px 0px rgba(50, 50, 50, 1)
+  &.open
+    bottom: 20px
+    left: 20px
+    -webkit-box-shadow: 4px 4px 10px 0px rgba(50, 50, 50, 0.67)
+    -moz-box-shadow:    4px 4px 10px 0px rgba(50, 50, 50, 0.67)
+    box-shadow:         4px 4px 10px 0px rgba(50, 50, 50, 0.67)
+    .remark_tab
+      & .remark_open_btn
+        opacity: 0
+      & .remark_close_btn
+        opacity: 1
+  .remark_tab
+    font-family: sans-serif
+    padding: 0px 10px
+    text-transform: uppercase
+    white-space: nowrap
+    height: 35px
+    text-align: center
+    position: absolute
+    top: 0px
+    right: 0px
+    & .remark_open_btn, & .remark_close_btn
+      transition: opacity 500ms linear 500ms
+      position: absolute
+    & .remark_open_btn
+      font-size: 20px
+      right: 10px
+      color: crimson
+      opacity: 1
+      &:before
+        content: "!"
+    & .remark_close_btn
+      font-size: 17px
+      top: 3px
+      right: 7px
+      color: #696969
+      opacity: 0
+      &:before
+        content: "X"
+
+  .remark_form
+    clear: both
+    margin: 10px
+    .remark-input
+      margin-top: 10px
+      input
+        width: 100%
+    .remark-action
+      margin-top: 10px
+      input
+        float: right

@@ -1,0 +1,21 @@
+=stylesheet_link_tag 'user_remarks/application'
+
+#remark_tab
+  .remark_tab
+    .remark_open_btn
+    .remark_close_btn
+  .remark_form
+    = simple_form_for :remarks,wrapper: false, remote: true, response: :json,method: :post do |f|
+      =f.error_notification
+      .remark-input
+        =f.label :title, label: t('user_remarks.remarks.title')
+        =f.input_field :title
+      .remark-input
+        =f.label :text, label: t('user_remarks.remarks.text')
+        =f.input_field :text, as: :text
+      .remark-input
+        =f.input_field :link, as: :hidden
+      .remark-action
+        =f.submit value: t('user_remarks.remarks.send')
+
+  =javascript_include_tag 'user_remarks/application'
