@@ -1,11 +1,15 @@
 =stylesheet_link_tag 'user_remarks/application'
+- submition_url = if UserRemarks.mount_subdomain.present?
+- user_remarks.remarks_url(subdomain: UserRemarks.mount_subdomain)
+- else
+- user_remarks.remarks_path
 
 #remark_tab
   .remark_tab
     .remark_open_btn
     .remark_close_btn
   .remark_form
-    = simple_form_for :remarks,wrapper: false, remote: true, response: :json,method: :post do |f|
+    = simple_form_for :remark, url: submition_url, wrapper: false, remote: true, response: :json,method: :post do |f|
       =f.error_notification
       .remark-input
         =f.label :title, label: t('user_remarks.remarks.title')

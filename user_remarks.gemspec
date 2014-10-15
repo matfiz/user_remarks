@@ -21,6 +21,7 @@ Gem::Specification.new do |s|
   s.add_dependency "simple_form"
   s.add_dependency "slim-rails"
   s.add_dependency "slack-notifier"
+  s.add_dependency 'jquery-rails'
   s.add_dependency 'jbuilder', '~> 2.0'
 
   s.add_development_dependency "sqlite3"

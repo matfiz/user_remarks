@@ -28,11 +28,11 @@ module UserRemarks
 
     def create
       @remark = Remark.new(remark_params)
-      @remark.user_id = send("current_#{UserRemarks.user_class.to_s.downcase}").id
+      @remark.user_id = send("current_#{UserRemarks.user_class.to_s.downcase}").id if send("current_#{UserRemarks.user_class.to_s.downcase}").present?
       respond_to do |format|
         if @remark.save
-          format.html {redirect_to @remark, notice: 'Remark was successfully created.'}
-          format.json {render :show, locale: @remark}
+          format.html {render :text => I18n.t('user_remarks.remarks.thank_you')}
+          format.json {render :text => I18n.t('user_remarks.remarks.thank_you')}
         else
           format.html {render :new}
         end
