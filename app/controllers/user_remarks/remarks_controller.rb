@@ -28,7 +28,6 @@ module UserRemarks
 
     def create
       @remark = Remark.new(remark_params)
-      @remark.user_id = send("current_#{UserRemarks.user_class.to_s.downcase}").id if send("current_#{UserRemarks.user_class.to_s.downcase}").present?
       respond_to do |format|
         if @remark.save
           format.html {render :text => I18n.t('user_remarks.remarks.thank_you')}
@@ -58,7 +57,7 @@ module UserRemarks
       end
 
       def remark_params
-        params.require(:remark).permit(:title, :text, :link)
+        params.require(:remark).permit(:title, :text, :link, :user_id)
       end
   end
 end
