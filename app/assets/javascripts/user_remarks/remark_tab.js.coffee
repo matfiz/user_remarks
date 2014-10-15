@@ -8,7 +8,7 @@ $ ->
     .toggleClass 'open'
 
   $ '#remark_tab form'
-  .on 'ajax:success',(data)->
+  .on 'ajax:success',(event, data)->
     alert data
     $ '#remark_tab'
     .removeClass 'open'
