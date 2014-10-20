@@ -1,4 +1,9 @@
-en:
+pl:
   user_remarks:
     remarks:
-      add_remark: 'Add remark'
+      add_remark: 'add remark'
+      title: 'Title'
+      text: 'Description'
+      thank_you: 'Thank you for your suggestions! We will contact you if we have further questions about the application.'
+      send: "Send"
+      remarks: "remarks"
