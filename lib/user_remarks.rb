@@ -8,6 +8,7 @@ module UserRemarks
   mattr_accessor :slack_token
   mattr_accessor :slack_channel
   mattr_accessor :mount_subdomain
+  mattr_accessor :mail_sender
 
   #override getter
   def self.user_class
