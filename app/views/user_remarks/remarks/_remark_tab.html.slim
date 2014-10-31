@@ -20,7 +20,7 @@
       .remark-input
         =f.input_field :link, as: :hidden
       .remark-input
-        =f.input_field :user_id, as: :hidden, value: "#{current_user.id}"
+        =f.input_field :user_id, as: :hidden, value: "#{current_user.id if current_user.present?}"
       .remark-action
         =f.submit value: t('user_remarks.remarks.send')
 
