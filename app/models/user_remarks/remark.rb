@@ -13,7 +13,8 @@ module UserRemarks
 
     def send_slack_notification
       #
-      notifier = ::Slack::Notifier.new UserRemarks.slack_team, UserRemarks.slack_token, channel: UserRemarks.slack_channel
+      # notifier = ::Slack::Notifier.new UserRemarks.slack_team, UserRemarks.slack_token, channel: UserRemarks.slack_channel
+      notifier = ::Slack::Notifier.new UserRemarks.slack_webhook_url, channel: UserRemarks.slack_channel
       notifier.username = user.to_s
       notifier.ping "#{title} || #{text}"
     end
