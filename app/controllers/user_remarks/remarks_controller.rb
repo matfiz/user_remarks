@@ -30,8 +30,8 @@ module UserRemarks
       @remark = Remark.new(remark_params)
       respond_to do |format|
         if @remark.save
-          format.html {render :text => I18n.t('user_remarks.remarks.thank_you')}
-          format.json {render :text => I18n.t('user_remarks.remarks.thank_you')}
+          format.json {render :json => {msg: I18n.t('user_remarks.remarks.thank_you')}.to_json, status: 201}
+          # format.html {render :text => I18n.t('user_remarks.remarks.thank_you')}
         else
           format.html {render :new}
         end

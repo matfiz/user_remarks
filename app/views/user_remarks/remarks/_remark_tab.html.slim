@@ -9,7 +9,7 @@
     .remark_open_btn
     .remark_close_btn
   .remark_form
-    = simple_form_for :remark, url: submition_url, wrapper: false, remote: true, response: :json,method: :post do |f|
+    = simple_form_for :remark, url: submition_url, wrapper: false, remote: true, :'data-type' => :json, method: :post do |f|
       =f.error_notification
       .remark-input
         =f.label :title, label: t('user_remarks.remarks.title')

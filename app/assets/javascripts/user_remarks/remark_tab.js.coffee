@@ -7,9 +7,12 @@ $ ->
     $ '#remark_tab'
     .toggleClass 'open'
 
+
   $ '#remark_tab form'
+
   .on 'ajax:success',(event, data)->
-    alert data
+    alert data.msg
+
     $ '#remark_tab'
     .removeClass 'open'
     $ '#remark_tab [type="submit"]'
