@@ -57,7 +57,7 @@ module UserRemarks
       end
 
       def remark_params
-        params.require(:remark).permit(:title, :text, :link, :user_id)
+        params.require(:remark).permit(:title, :text, :link, :user_id, :user_type)
       end
   end
 end
